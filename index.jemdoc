@@ -1,0 +1,58 @@
+= Harsh Panchal
+
+~~~
+{}{img_left}{harsh_panchal.jpg}{Image of Harsh Panchal}{200px}{200px}
+
+I am a software engineer currently working at [https://www.thumbtack.com/ Thumbtack], focusing mainly on backend infrastructure for the marketplace matching team. Before Thumbtack, I was working at Oracle in the [https://docs.oracle.com/cd/E11882_01/server.112/e18951/asmcon.htm Automatic Storage Management] team.
+
+I completed my Masters in Computer Science from [https://www.cornell.edu/ Cornell University] in 2013.
+
+My expertise and interests include building scalable infrastructure and software solutions for various domains including machine learning and search retrieval.\n\n
+
+[https://www.linkedin.com/in/panchalhp /LinkedIn/]   |   [https://github.com/panchalhp /Github/]   |   [https://drive.google.com/open?id=1Rm6_21HlNdVtf0kjbWOQ9jyPFVGSar0i /Resume/] \n
+*Email*: [panchalhp@gmail.com panchalhp@gmail.com]
+
+~~~
+
+== Skills and Experience
+- *Programming Languages*: Go, Scala, Python, PHP, Java
+- *Datastores*: PostgreSQL, Elasticsearch, DynamoDB
+- *Frameworks*: Spark, Play, Akka
+- *Amazon Web Services*: Simple Queing Service, DynamoDB, S3
+- *Google Cloud Platform*: Dataproc, BigQuery, Google Cloud Storage
+- *Tools*: Git, Intellij, Vim
+
+== Work Experience
+=== Thumbtack (Nov 2015 - present)
+- *Aggregating click signal data to use in ranking search results*
+-- Thumbtack allows customers to perform a [https://www.thumbtack.com/ca/san-francisco/house-cleaning/ multi-faceted search] for professionals (pros) based on their requirements
+-- After fetching the matching pros, we rank them to show the most relevant pros to the customer
+-- How the customer interacts with these search results (views, clicks, contacts) give us a very strong signal about how relevant the results are to the customer
+-- Built an offline pipeline that synthesises the relevant event data and makes it available for offline analytics as well as in an online datastore that can be used to influence the ranking of the results based on the past customer interactions with similar results
+-- Scalable pipeline built using /Scala + Spark/ which aggregates event data over the past few months and refreshes data daily
+-- About 65 million events per day need to be synthesized for calculating the aggregate data. Optimized pipeline calulated new aggregates over several months in less than 10 minutes each day
+
+- *Reducing latency of the search results*
+-- Reduced the e2e latency of the backend service that handles searching and ranking pros for a customer request by 50%
+-- Added relevant monitoring and logging to gain better insight into slow components in the service
+-- Parallelized independant I/O calls, optimized datastore performance by reducing the data size by 70% hence making it more efficient
+
+- *Building Thumbtack's machine learning platform*
+-- Part of a 2 people team that built the entire of Thumbtack's machine learning infrastructure from the ground up over the course of a year
+-- Most of the infrastructure was built using Scala + Spark, leveraging Spark's MLLib library
+-- Our Platform supported the following:
+--- Model deployment and online serving
+--- Model retraining pipeline
+--- Automated model evaluation after retraining
+--- Automated dark launching of the new retrained model
+--- Logging pipeline for the online predictions to track online model performance
+--- Comparing online performance of dark launched model with the existing model
+--- Build a feature store to make it easier for data scientists to mix and match and re-use existing / pre-calculated features
+-- At the end of the year, the platform was able to support 10+ models serving production traffic including linear and logistic regression, naive bayes, random forest and gradient boosted trees
+
+=== Oracle (Jul 2013 - Nov 2015)
+- *Version compatibility between Oracle RDBMS and ASM*
+-- Oracle's Automatic Storage Manager (ASM) as well as Relational Database Management System (RDBMS) can be installed and upgraded independant of each other
+-- Developed a framework to identify the compatibility between different versions of ASM and RDBMS by checking the information about the various dependant patch-set units applied to both components at startup 
+
+

@@ -1,11 +1,121 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            HarshPanchal.com
-        </title>
-    </head>
-    <body>
-        <div><a href="https://www.linkedin.com/in/panchalhp">LinkedIn</a></div>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Harsh Panchal</title>
+</head>
+<body>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Harsh Panchal</h1>
+</div>
+<table class="imgtable"><tr><td>
+<img src="harsh_panchal.jpg" alt="Image of Harsh Panchal" width="200px" height="200px" />&nbsp;</td>
+<td align="left"><p>I am a software engineer currently working at <a href="https://www.thumbtack.com/">Thumbtack</a>, focusing mainly on backend infrastructure for the marketplace matching team. Before Thumbtack, I was working at Oracle in the <a href="https://docs.oracle.com/cd/E11882_01/server.112/e18951/asmcon.htm">Automatic Storage Management</a> team.</p>
+<p>I completed my Masters in Computer Science from <a href="https://www.cornell.edu/">Cornell University</a> in 2013.</p>
+<p>My expertise and interests include building scalable infrastructure and software solutions for various domains including machine learning and search retrieval.<br /><br /></p>
+<p><a href="https://www.linkedin.com/in/panchalhp"><i>LinkedIn</i></a>   |   <a href="https://github.com/panchalhp"><i>Github</i></a>   |   <a href="https://drive.google.com/open?id=1Rm6_21HlNdVtf0kjbWOQ9jyPFVGSar0i"><i>Resume</i></a> <br />
+<b>Email</b>: <a href="mailto:panchalhp@gmail.com">panchalhp@gmail.com</a></p>
+</td></tr></table>
+<h2>Skills and Experience</h2>
+<ul>
+<li><p><b>Programming Languages</b>: Go, Scala, Python, PHP, Java</p>
+</li>
+<li><p><b>Datastores</b>: PostgreSQL, Elasticsearch, DynamoDB</p>
+</li>
+<li><p><b>Frameworks</b>: Spark, Play, Akka</p>
+</li>
+<li><p><b>Amazon Web Services</b>: Simple Queing Service, DynamoDB, S3</p>
+</li>
+<li><p><b>Google Cloud Platform</b>: Dataproc, BigQuery, Google Cloud Storage</p>
+</li>
+<li><p><b>Tools</b>: Git, Intellij, Vim</p>
+</li>
+</ul>
+<h2>Work Experience</h2>
+<h3>Thumbtack (Nov 2015 - present)</h3>
+<ul>
+<li><p><b>Aggregating click signal data to use in ranking search results</b></p>
+<ul>
+<li><p>Thumbtack allows customers to perform a <a href="https://www.thumbtack.com/ca/san-francisco/house-cleaning/">multi-faceted search</a> for professionals (pros) based on their requirements</p>
+</li>
+<li><p>After fetching the matching pros, we rank them to show the most relevant pros to the customer</p>
+</li>
+<li><p>How the customer interacts with these search results (views, clicks, contacts) give us a very strong signal about how relevant the results are to the customer</p>
+</li>
+<li><p>Built an offline pipeline that synthesises the relevant event data and makes it available for offline analytics as well as in an online datastore that can be used to influence the ranking of the results based on the past customer interactions with similar results</p>
+</li>
+<li><p>Scalable pipeline built using <i>Scala + Spark</i> which aggregates event data over the past few months and refreshes data daily</p>
+</li>
+<li><p>About 65 million events per day need to be synthesized for calculating the aggregate data. Optimized pipeline calulated new aggregates over several months in less than 10 minutes each day</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li><p><b>Reducing latency of the search results</b></p>
+<ul>
+<li><p>Reduced the e2e latency of the backend service that handles searching and ranking pros for a customer request by 50%</p>
+</li>
+<li><p>Added relevant monitoring and logging to gain better insight into slow components in the service</p>
+</li>
+<li><p>Parallelized independant I/O calls, optimized datastore performance by reducing the data size by 70% hence making it more efficient</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li><p><b>Building Thumbtack's machine learning platform</b></p>
+<ul>
+<li><p>Part of a 2 people team that built the entire of Thumbtack's machine learning infrastructure from the ground up over the course of a year</p>
+</li>
+<li><p>Most of the infrastructure was built using Scala + Spark, leveraging Spark's MLLib library</p>
+</li>
+<li><p>Our Platform supported the following:</p>
+<ul>
+<li><p>Model deployment and online serving</p>
+</li>
+<li><p>Model retraining pipeline</p>
+</li>
+<li><p>Automated model evaluation after retraining</p>
+</li>
+<li><p>Automated dark launching of the new retrained model</p>
+</li>
+<li><p>Logging pipeline for the online predictions to track online model performance</p>
+</li>
+<li><p>Comparing online performance of dark launched model with the existing model</p>
+</li>
+<li><p>Build a feature store to make it easier for data scientists to mix and match and re-use existing / pre-calculated features</p>
+</li></ul>
+</li>
+<li><p>At the end of the year, the platform was able to support 10+ models serving production traffic including linear and logistic regression, naive bayes, random forest and gradient boosted trees</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h3>Oracle (Jul 2013 - Nov 2015)</h3>
+<ul>
+<li><p><b>Version compatibility between Oracle RDBMS and ASM</b></p>
+<ul>
+<li><p>Oracle's Automatic Storage Manager (ASM) as well as Relational Database Management System (RDBMS) can be installed and upgraded independant of each other</p>
+</li>
+<li><p>Developed a framework to identify the compatibility between different versions of ASM and RDBMS by checking the information about the various dependant patch-set units applied to both components at startup </p>
+</li>
+</ul>
+
+</li>
+</ul>
+<div id="footer">
+<div id="footer-text">
+Page generated 2018-08-05 14:58:19 PDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</div>
+</body>
 </html>
