@@ -40,17 +40,13 @@
 <ul>
 <li><p><b>Aggregating click signal data to use in ranking search results</b></p>
 <ul>
-<li><p>Thumbtack allows customers to perform a <a href="https://www.thumbtack.com/ca/san-francisco/house-cleaning/">multi-faceted search</a> for professionals (pros) based on their requirements</p>
+<li><p>Built an offline pipeline that synthesises relevant events data to extract signals about the customer's engagement with Thumbtack's <a href="https://www.thumbtack.com/ca/san-francisco/house-cleaning/">search results</a> (views, clicks, contacts etc.) and made it available for offline analysis and online serving</p>
 </li>
-<li><p>After fetching the matching pros, we rank them to show the most relevant pros to the customer</p>
+<li><p>Built the scalable pipeline using <i>Scala + Spark</i> which aggregates event data over the past few months and refreshes the data daily</p>
 </li>
-<li><p>How the customer interacts with these search results (views, clicks, contacts) give us a very strong signal about how relevant the results are to the customer</p>
+<li><p>Optimized the pipeline to calulate daily aggregates over past several months in less than 10 minutes despite having about 65 million events per day to process</p>
 </li>
-<li><p>Built an offline pipeline that synthesises the relevant event data and makes it available for offline analytics as well as in an online datastore that can be used to influence the ranking of the results based on the past customer interactions with similar results</p>
-</li>
-<li><p>Scalable pipeline built using <i>Scala + Spark</i> which aggregates event data over the past few months and refreshes data daily</p>
-</li>
-<li><p>About 65 million events per day need to be synthesized for calculating the aggregate data. Optimized pipeline calulated new aggregates over several months in less than 10 minutes each day</p>
+<li><p>Added monitoring dashboards and alerting to validate the generated data to ensure data sanity and to make it immune to upstream changes</p>
 </li>
 </ul>
 
@@ -74,9 +70,9 @@
 <ul>
 <li><p>Part of a 2 people team that built the entire of Thumbtack's machine learning infrastructure from the ground up over the course of a year</p>
 </li>
-<li><p>Most of the infrastructure was built using Scala + Spark, leveraging Spark's MLLib library</p>
+<li><p>Most of the infrastructure was built using <i>Scala + Spark</i>, leveraging Spark's MLLib library</p>
 </li>
-<li><p>Our Platform supported the following:</p>
+<li><p>Machine learning platform supported the following features:</p>
 <ul>
 <li><p>Model deployment and online serving</p>
 </li>
@@ -90,10 +86,10 @@
 </li>
 <li><p>Comparing online performance of dark launched model with the existing model</p>
 </li>
-<li><p>Build a feature store to make it easier for data scientists to mix and match and re-use existing / pre-calculated features</p>
+<li><p>Built a feature store to make it easier for data scientists to mix and match and re-use existing / pre-calculated features</p>
 </li></ul>
 </li>
-<li><p>At the end of the year, the platform was able to support 10+ models serving production traffic including linear and logistic regression, naive bayes, random forest and gradient boosted trees</p>
+<li><p>The platform supported 10+ models serving production traffic including linear and logistic regression models, naive bayes, random forest and gradient boosted trees</p>
 </li>
 </ul>
 
@@ -103,9 +99,7 @@
 <ul>
 <li><p><b>Version compatibility between Oracle RDBMS and ASM</b></p>
 <ul>
-<li><p>Oracle's Automatic Storage Manager (ASM) as well as Relational Database Management System (RDBMS) can be installed and upgraded independant of each other</p>
-</li>
-<li><p>Developed a framework to identify the compatibility between different versions of ASM and RDBMS by checking the information about the various dependant patch-set units applied to both components at startup </p>
+<li><p>Developed a framework to identify the compatibility between different versions of Oracle&rsquo; Automatic Storage Manager (ASM) and Oracle's Relational Database Management System (RDBMS) by checking the information about the various dependant patch-set units applied to both components at startup</p>
 </li>
 </ul>
 
@@ -113,7 +107,7 @@
 </ul>
 <div id="footer">
 <div id="footer-text">
-Page generated 2018-08-05 17:23:08 PDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2018-08-05 17:54:39 PDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </div>
