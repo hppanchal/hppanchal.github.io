@@ -26,18 +26,18 @@ My expertise and interests include building scalable infrastructure and software
 === Thumbtack (Nov 2015 - present)
 - *Aggregating click signal data to use in ranking search results*
 -- Built an offline pipeline that synthesises relevant events data to extract signals about the customer's engagement with Thumbtack's [https://www.thumbtack.com/ca/san-francisco/house-cleaning/ search results] (views, clicks, contacts etc.) and made it available for offline analysis and online serving
--- Built the scalable pipeline using /Scala + Spark/ which aggregates event data over the past few months and refreshes the data daily
--- Optimized the pipeline to calulate daily aggregates over past several months in less than 10 minutes despite having about 65 million events per day to process
--- Added monitoring dashboards and alerting to validate the generated data to ensure data sanity and to make it immune to upstream changes
+-- Built the scalable pipeline using /Scala + Spark/ which generates daily snapshots by aggregating data over the past few months
+-- Optimized the pipeline to calulate daily snapshots in less than 10 minutes despite having about 65 million events per day to process
+-- Added monitoring dashboards and alerting to validate the generated data to ensure sanity and to make it immune to upstream changes
 
 - *Reducing latency of the search results*
--- Reduced the e2e latency of the backend service that handles searching and ranking pros for a customer request by 50%
+-- Reduced e2e latency of the service that searches and ranks professionals using a customer request by 50%
 -- Added relevant monitoring and logging to gain better insight into slow components in the service
--- Parallelized independant I/O calls, optimized datastore performance by reducing the data size by 70% hence making it more efficient
+-- Parallelized independent I/O calls, optimized datastore performance by reducing the data size by 70% making it more efficient
 
 - *Building Thumbtack's machine learning platform*
--- Part of a 2 people team that built the entire of Thumbtack's machine learning infrastructure from the ground up over the course of a year
--- Most of the infrastructure was built using /Scala + Spark/, leveraging Spark's MLLib library
+-- Part of a 2 people team that built the entire of Thumbtack's machine learning infrastructure from the ground up
+-- Infrastructure was built using /Scala + Spark/, leveraging Spark's MLLib library
 -- Machine learning platform supported the following features:
 --- Model deployment and online serving
 --- Model retraining pipeline
@@ -46,7 +46,7 @@ My expertise and interests include building scalable infrastructure and software
 --- Logging pipeline for the online predictions to track online model performance
 --- Comparing online performance of dark launched model with the existing model
 --- Built a feature store to make it easier for data scientists to mix and match and re-use existing / pre-calculated features
--- The platform supported 10+ models serving production traffic including linear and logistic regression models, naive bayes, random forest and gradient boosted trees
+-- The platform supported 10+ models serving production traffic including linear and logistic regression models, naive bayes, random forest and gradient boosted trees which powered some of Thumbtack's core product experiences
 
 === Oracle (Jul 2013 - Nov 2015)
 - *Version compatibility between Oracle RDBMS and ASM*
