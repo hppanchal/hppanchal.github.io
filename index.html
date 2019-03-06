@@ -36,7 +36,24 @@
 </li>
 </ul>
 <h2>Work Experience</h2>
-<h3>Thumbtack (Nov 2015 - present)</h3>
+<h3>Thumbtack (Nov 2015 - Mar 2019)</h3>
+<ul>
+<li><p><b>Reducing latency of search results</b></p>
+<ul>
+<li><p>Reduced e2e latency of the service that searches and ranks professionals using a customer request by 33% at the 95th percentile</p>
+</li>
+<li><p>Added better instrumentation (metrics and traces) to gain deeper insight into slow components in the service</p>
+</li>
+<li><p>Rearchitected the matching service by enforcing a modularized structure and restricting all external I/O calls to only the data enrichment module where independant network calls are always made in parallel</p>
+</li>
+<li><p>Optimized the datastore performance by reducing the data size by 70% making it more efficient</p>
+</li>
+<li><p>Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependant components are down</p>
+</li>
+</ul>
+
+</li>
+</ul>
 <ul>
 <li><p><b>Aggregating click signal data to use in ranking search results</b></p>
 <ul>
@@ -47,19 +64,6 @@
 <li><p>Optimized the pipeline to calulate daily snapshots in less than 10 minutes despite having about 65 million events per day to process</p>
 </li>
 <li><p>Added monitoring dashboards and alerting to validate the generated data to ensure sanity and to make it immune to upstream changes</p>
-</li>
-</ul>
-
-</li>
-</ul>
-<ul>
-<li><p><b>Reducing latency of the search results</b></p>
-<ul>
-<li><p>Reduced e2e latency of the service that searches and ranks professionals using a customer request by 50%</p>
-</li>
-<li><p>Added relevant monitoring and logging to gain better insight into slow components in the service</p>
-</li>
-<li><p>Parallelized independent I/O calls, optimized datastore performance by reducing the data size by 70% making it more efficient</p>
 </li>
 </ul>
 
@@ -107,7 +111,7 @@
 </ul>
 <div id="footer">
 <div id="footer-text">
-Page generated 2018-08-06 22:09:52 PDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2019-03-06 14:03:49 PST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </div>
