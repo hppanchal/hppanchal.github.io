@@ -44,11 +44,11 @@
 </li>
 <li><p>Added better instrumentation (metrics and traces) to gain deeper insight into slow components in the service</p>
 </li>
-<li><p>Rearchitected the matching service by enforcing a modularized structure and restricting all external I/O calls to only the data enrichment module where independant network calls are always made in parallel</p>
+<li><p>Rearchitected the matching service by enforcing a modularized structure and restricting all external I/O calls to only the data enrichment module where independent network calls are always made in parallel</p>
 </li>
 <li><p>Optimized the datastore performance by reducing the data size by 70% making it more efficient</p>
 </li>
-<li><p>Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependant components are down</p>
+<li><p>Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependent components are down</p>
 </li>
 </ul>
 
@@ -57,11 +57,11 @@
 <ul>
 <li><p><b>Aggregating click signal data to use in ranking search results</b></p>
 <ul>
-<li><p>Built an offline pipeline that synthesises relevant events data to extract signals about the customer's engagement with Thumbtack's <a href="https://www.thumbtack.com/ca/san-francisco/house-cleaning/">search results</a> (views, clicks, contacts etc.) and made it available for offline analysis and online serving</p>
+<li><p>Built an offline pipeline that synthesizes relevant events data to extract signals about the customer's engagement with Thumbtack's <a href="https://www.thumbtack.com/ca/san-francisco/house-cleaning/">search results</a> (views, clicks, contacts etc.) and made it available for offline analysis and online serving</p>
 </li>
 <li><p>Built the scalable pipeline using <i>Scala + Spark</i> which generates daily snapshots by aggregating data over the past few months</p>
 </li>
-<li><p>Optimized the pipeline to calulate daily snapshots in less than 10 minutes despite having about 65 million events per day to process</p>
+<li><p>Optimized the pipeline to calculate daily snapshots in less than 10 minutes despite having about 65 million events per day to process</p>
 </li>
 <li><p>Added monitoring dashboards and alerting to validate the generated data to ensure sanity and to make it immune to upstream changes</p>
 </li>
@@ -103,7 +103,7 @@
 <ul>
 <li><p><b>Version compatibility between Oracle RDBMS and ASM</b></p>
 <ul>
-<li><p>Developed a framework to identify the compatibility between different versions of Oracle&rsquo; Automatic Storage Manager (ASM) and Oracle's Relational Database Management System (RDBMS) by checking the information about the various dependant patch-set units applied to both components at startup</p>
+<li><p>Developed a framework to identify the compatibility between different versions of Oracle&rsquo; Automatic Storage Manager (ASM) and Oracle's Relational Database Management System (RDBMS) by checking the information about the various dependent patch-set units applied to both components at startup</p>
 </li>
 </ul>
 
@@ -111,7 +111,7 @@
 </ul>
 <div id="footer">
 <div id="footer-text">
-Page generated 2019-03-06 14:03:49 PST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2019-03-06 14:08:17 PST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </div>

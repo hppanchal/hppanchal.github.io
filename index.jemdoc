@@ -27,15 +27,15 @@ My expertise and interests include building scalable infrastructure and software
 - *Reducing latency of search results*
 -- Reduced e2e latency of the service that searches and ranks professionals using a customer request by 33% at the 95th percentile
 -- Added better instrumentation (metrics and traces) to gain deeper insight into slow components in the service
--- Rearchitected the matching service by enforcing a modularized structure and restricting all external I/O calls to only the data enrichment module where independant network calls are always made in parallel
+-- Rearchitected the matching service by enforcing a modularized structure and restricting all external I/O calls to only the data enrichment module where independent network calls are always made in parallel
 -- Optimized the datastore performance by reducing the data size by 70% making it more efficient
--- Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependant components are down
+-- Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependent components are down
 
 
 - *Aggregating click signal data to use in ranking search results*
--- Built an offline pipeline that synthesises relevant events data to extract signals about the customer's engagement with Thumbtack's [https://www.thumbtack.com/ca/san-francisco/house-cleaning/ search results] (views, clicks, contacts etc.) and made it available for offline analysis and online serving
+-- Built an offline pipeline that synthesizes relevant events data to extract signals about the customer's engagement with Thumbtack's [https://www.thumbtack.com/ca/san-francisco/house-cleaning/ search results] (views, clicks, contacts etc.) and made it available for offline analysis and online serving
 -- Built the scalable pipeline using /Scala + Spark/ which generates daily snapshots by aggregating data over the past few months
--- Optimized the pipeline to calulate daily snapshots in less than 10 minutes despite having about 65 million events per day to process
+-- Optimized the pipeline to calculate daily snapshots in less than 10 minutes despite having about 65 million events per day to process
 -- Added monitoring dashboards and alerting to validate the generated data to ensure sanity and to make it immune to upstream changes
 
 - *Building Thumbtack's machine learning platform*
@@ -53,6 +53,6 @@ My expertise and interests include building scalable infrastructure and software
 
 === Oracle (Jul 2013 - Nov 2015)
 - *Version compatibility between Oracle RDBMS and ASM*
--- Developed a framework to identify the compatibility between different versions of Oracle' Automatic Storage Manager (ASM) and Oracle's Relational Database Management System (RDBMS) by checking the information about the various dependant patch-set units applied to both components at startup
+-- Developed a framework to identify the compatibility between different versions of Oracle' Automatic Storage Manager (ASM) and Oracle's Relational Database Management System (RDBMS) by checking the information about the various dependent patch-set units applied to both components at startup
 
 
