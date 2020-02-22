@@ -3,7 +3,7 @@
 ~~~
 {}{img_left}{harsh_panchal.jpg}{Image of Harsh Panchal}{200px}{200px}
 
-I am a software engineer who recently joined Facebook.
+I am a software engineer currently working at Facebook with the Identity Platform team, building infrastructure and frameworks that help scale the platform better.
 
 Prior to this, I was working at [https://www.thumbtack.com/ Thumbtack], focusing mainly on backend infrastructure for the marketplace matching team. Before Thumbtack, I was working at Oracle in the [https://docs.oracle.com/cd/E11882_01/server.112/e18951/asmcon.htm Automatic Storage Management] team.
 
@@ -17,7 +17,7 @@ My expertise and interests include building scalable infrastructure and software
 ~~~
 
 == Skills and Experience
-- *Programming Languages*: Go, Scala, Python, PHP, Java
+- *Programming Languages*: Hack/PHP, Go, Python, Scala, C\+\+, Java
 - *Datastores*: PostgreSQL, Elasticsearch, DynamoDB
 - *Frameworks*: Spark, Play, Akka
 - *Amazon Web Services*: Simple Queing Service, DynamoDB, S3
@@ -25,6 +25,17 @@ My expertise and interests include building scalable infrastructure and software
 - *Tools*: Git, Intellij, Vim
 
 == Work Experience
+=== Facebook (Mar 2019 - Present)
+- *Building framework to support privacy enforcement at scale*
+-- Working on tagging data sources and propagating relevant metadata across various pipelines to allow serving of privacy compliant identity data to various internal customers
+
+
+- *Modularizing model versioning framework for Identity Platform*
+-- Abstracted common transformations across 10s of model versions into config files which were injected into data pipelines to allow model developers to iterate faster
+-- Collaborated across multiple teams to better understand the gaps in the existing framework and provide the support and framework improvements they would need to execute faster on their roadmap
+-- Better modularization allowed developers to support numerous privacy compliant model versions in a tight timeframe which would otherwise take 3x the number of resources
+
+
 === Thumbtack (Nov 2015 - Mar 2019)
 - *Reducing latency of search results*
 -- Reduced e2e latency of the service that searches and ranks professionals using a customer request by 33% at the 95th percentile
@@ -34,7 +45,7 @@ My expertise and interests include building scalable infrastructure and software
 -- Increased the availability of the service by making certain dependencies non-critical to ensure that requests are served (albeit with a performance degradation) even when other dependent components are down
 
 
-- *Aggregating click signal data to use in ranking search results*
+- *Aggregated click signal data to use in ranking search results*
 -- Built an offline pipeline that synthesizes relevant events data to extract signals about the customer's engagement with Thumbtack's [https://www.thumbtack.com/ca/san-francisco/house-cleaning/ search results] (views, clicks, contacts etc.) and made it available for offline analysis and online serving
 -- Built the scalable pipeline using /Scala + Spark/ which generates daily snapshots by aggregating data over the past few months
 -- Optimized the pipeline to calculate daily snapshots in less than 10 minutes despite having about 65 million events per day to process
